@@ -5,10 +5,10 @@
 ## hours of input and any wage per hour.
 
 ## VARIABLES
-employeeName = input("Insert the employee's Full Name")
+employeeName = input("Insert the employee's Full Name --> ")
 
-hourlyWage = float(input("Insert the employee's hourly wage"))
-hoursWorked = float(input("Insert the employee's total hours worked"))
+hourlyWage = float(input("Insert the employee's hourly wage --> "))
+hoursWorked = float(input("Insert the employee's total hours worked --> "))
 
 
 ## FUNCTIONS
@@ -21,10 +21,11 @@ hoursWorked = float(input("Insert the employee's total hours worked"))
 ##   elif(hoursWorked <= 40 && hoursWorked > 0)
 ##        return hourlyWage * hoursWorked; 
 
-def grossPayCalc(hourlyWage,hoursWorked):
-  otWage = (float(hourlyWage + (hourlyWage / 2)))
-  if hoursWorked > 40:
-    otHours = (float(hoursWorked - 40))
+def grossPayCalc(hourlyWage,hoursWorked):         # The function takes in two (2) parameters of type float, hourlyWage and hoursWorked
+  otWage = (float(hourlyWage + (hourlyWage / 2))) # The variable, otWage of type float, is declared and assigned a value of "1.5x hourlyWage", i.e. "Time and a half".
+  if hoursWorked > 40:                            # If overtime hours are detected,
+    otHours = (float(hoursWorked - 40))           # Variable, otHours of type float, is declared and is assigned a value of Overtime Hours only. i.e. if 45 hours are worked, the value of 5 will be assigned to otHours.
+    print("Overtime hours detected. ", otHours, " overtime hours worked.")
     return (hourlyWage * hoursWorked) + (otWage * otHours)
   elif hoursWorked <= 40 and hoursWorked > 0:
     return hourlyWage * hoursWorked
@@ -32,7 +33,9 @@ def grossPayCalc(hourlyWage,hoursWorked):
 grossPay = grossPayCalc(hourlyWage,hoursWorked)
 netPay = float(grossPay - (grossPay * 0.1))
 
-print(netPay)
+print("Employee Name: " + str(employeeName) + 
+      "\n Gross Pay: $" + str(grossPay) + 
+      "\n Net Pay: $" + str(netPay)) # Add the employee information on the next line, without adding a new print() function
 
 ## Taxes on wages
 # netPay(double grossPay)
