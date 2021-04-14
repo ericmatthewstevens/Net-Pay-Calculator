@@ -3,7 +3,7 @@
 
 # All statements will run within a while loop
 moreLoops = True  # A variable of type boolean will always store a value of True so the program can start
-payrollArray = []
+payrollArray = [] # Create an Array to hold individual paychecks for employees
 
 while moreLoops == True:
 
@@ -33,15 +33,8 @@ while moreLoops == True:
         "\n Net Pay: $" + str(netPay))
   # Print all requirements (Employee Name, Hours Worked, Hourly Wage, Gross Pay, Taxes Paid and Net Pay)
 
-  # Create an Array to hold individual paychecks for employees
-    # The first row will contain employee names
-    # The second column will contain the net pay to the corresponding employees
-
-    # for i = 0; moreLoops == False; i++:
-      # arrayName.insert(i, employeeName + " " + netPay)
-      # print(arrayName[i])
-
   payrollArray.append(str("Pay to the order of " + employeeName + ":    $" + str(netPay)))
+  # Add the employee name and the net pay to a new index.
 
   addEmployee = str(input("Add another employee? \n [Y]/[N] --> "))
   # After one employee's wages breakdown is output, the user will be asked if they would like to continue with another employee or if they are finished.
@@ -54,5 +47,5 @@ while moreLoops == True:
     moreLoops = False
     # If the user chooses not to continue, the while loop will no longer loop. 
 
-for i in payrollArray:
-  print(i)
+for i in payrollArray: # For every iteration made in the array payrollArray,
+  print(i)             # print the current index.
