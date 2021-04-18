@@ -3,6 +3,7 @@
 
 # All statements will run within a while loop
 moreLoops = True  # A variable of type boolean will always store a value of True so the program can start
+
 payrollArray = [] # Create an Array to hold individual paychecks for employees
 
 while moreLoops == True:
@@ -11,6 +12,7 @@ while moreLoops == True:
   employeeName = input("Insert the employee's Full Name --> ") # Create a variable of type String and store the employee's name
   hourlyWage = float(input("Insert the employee's hourly wage --> ")) # Create a variable of float and store the hourly wage of the employee
   hoursWorked = float(input("Insert the employee's total hours worked --> ")) # Create a variable of type float and store the total hours the employee has worked
+
 
   def overTimeHoursCalc(hoursWorked):     # Function signature for overtime hours calc: take in one parameter, hoursWorked
     if hoursWorked > 40:                  # If overtime hours are detected,
@@ -68,3 +70,5 @@ while moreLoops == True:
     # If the user chooses not to continue, the while loop will no longer loop. 
   else:
     moreLoops = True
+
+    
